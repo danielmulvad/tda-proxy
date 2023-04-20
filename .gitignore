@@ -1,5 +1,5 @@
 **
-
+!.github/
 !.gitignore
 !Dockerfile
 !nginx.conf
