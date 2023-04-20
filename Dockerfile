@@ -7,9 +7,6 @@ RUN --mount=type=secret,id=PRIVATE_CERTIFICATE_KEY cat /run/secrets/PRIVATE_CERT
 # Copy the nginx configuration file
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy the build output
-COPY --from=builder /app/build /usr/share/nginx/html
-
 # Expose ports
 EXPOSE 80
 EXPOSE 443
