@@ -5,7 +5,7 @@ RUN --mount=type=secret,id=PRIVATE_CERTIFICATE_CERT cat /run/secrets/PRIVATE_CER
 RUN --mount=type=secret,id=PRIVATE_CERTIFICATE_KEY cat /run/secrets/PRIVATE_CERTIFICATE_KEY > /etc/nginx/ssl/key.pem
 
 # Copy the nginx configuration file
-COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose ports
 EXPOSE 80
